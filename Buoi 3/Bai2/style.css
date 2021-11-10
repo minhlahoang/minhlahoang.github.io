@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#header .logo {
+    color: rgb(0, 0, 0);
+}
+
+#nav {
+    list-style: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav > li > a {
+    color: rgb(0, 0, 0);
+}
+
+#nav li a {
+    text-decoration: none;
+    padding: 0 24px;
+}
+
+.header-btn button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    background: none;
+}
+
+.header-btn button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    list-style: none;
+}
+
+.header-btn button:hover{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+}
+.header-btn button:hover a {
+    color: #fff;
+}
+
+#slider {
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#text-slider .text-slider-heading {
+    font-size: 60px;
+    /* font-weight: 600; */
+}
+
+#text-slider .slider-btn {
+    padding: 8px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    background: none;
+    cursor: pointer;
+}
+
+#text-slider .slider-btn:nth-last-child(2) {
+    background: #000;
+    color: #fff;
+}
+
+#slider  p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#slider .slider-img {
+    width: 500px;
+    border-radius: 80px 0 30px 50px;
+}
+
+#content {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#content #text-content {
+    margin-left: 10px;
+}
+
+#content .text-heading {
+    font-size: 30px;
+}
+
+#content p {
+    margin-top: 30px;
+}
+
+#img-content {
+    position: relative;
+}
+
+#img-content .directional{
+    position: absolute;
+    font-size: 30px;
+    top: 40%;
+    padding-left: 20px;
+}
+
+#img-content .directional i:last-child {
+    position: relative;
+    left: 692px;
+}
+
+#img-content .member-list {
+    width: 170px;
+    height: 170px;
+    margin: 0 5px;
+    border-radius: 15px;
+    /* border: 1px solid #000; */
+    box-shadow: 2px 2px 5px #888888;
+}

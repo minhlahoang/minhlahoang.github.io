@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+.h-container{
+    display: flex;
+    align-items: center;
+}
+.box{
+    width: 3rem;
+    height: 3rem;
+    background-color: yellow;
+}
+
+.t-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.t-content{
+    display: flex;
+}
+/* 
+.two-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.box.box1 {
+    align-self: flex-end;
+}
+
+.two-content {
+    display: flex;
+} */
