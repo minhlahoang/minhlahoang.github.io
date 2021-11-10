@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    background-color: rgb(78, 75, 75);
+}
+
+.header {
+    
+}
+
+.header-heading{
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.header h2:last-child {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    color: #fff;
+}
+
+.container .clock {
+    margin-bottom: 20px;
+}
+
+.container .container-text{
+    margin-bottom: 40px;
+    
+}
+
+.bar {
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.bar.bar-bottom {
+    display: none;
+}
+
+.bar2 {
+    margin: 0 15px;
+    height: calc(100vh - 250px);
+    width: 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+.column1 {
+   flex: 1;
+}
+
+.column2 {
+    flex: 2;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.column3 {
+  flex: 1;
+}
+
+.column4 {
+    flex: 2;
+}
+
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .bar2 {
+        display: none;
+    }
+    .bar.bar-bottom {
+        display: block;
+    }
+    .container .clock,
+    .container .container-text {
+        margin: 15px 0;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .container {
+        display: grid;
+        grid-template-columns: 1.5fr 0.01fr 2.5fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-gap: 30px;
+        grid-template-areas: 
+        "h1 h5 h2"
+        "h1 h5 h2"
+        "h1 h5 h2"
+        "h3 h6 h4"
+        "h3 h6 h4"
+        "h3 h6 h4" 
+        ;
+    }
+    .container .bar2 {
+        display: block;
+        grid-area: h5;
+        height: 350px;
+    }
+    .container .bar2.bar2-sc {
+        grid-area: h6;
+        height: 350px;
+    }
+
+    .bar2.bar-right{
+        display: none;    
+    }
+
+    .bar.bar-bottom {
+        display: block;
+    }
+
+    .bar.bar-cl2 {
+        display: none;
+    }
+
+    .column1 {
+       grid-area: h1;
+    }
+
+    .column2{
+        grid-area: h2;
+    }
+    .column3{
+        grid-area: h3;
+    }
+    .column4 {
+        grid-area: h4;
+    }
+   
+    .img {
+       height: 230px;
+    }
+}
