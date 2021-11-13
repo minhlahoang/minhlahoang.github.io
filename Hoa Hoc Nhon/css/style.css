@@ -17,7 +17,7 @@
     background-color: rgb(0, 0, 0);
 }
 
-#nav {
+#nav, .subnav {
  list-style: none;
 }
 
@@ -45,6 +45,10 @@
 #nav li:hover a {
     background-color: tomato;
     color: #fff;
+}
+
+#nav .subnav {
+    display: none;
 }
 
 #slider{
@@ -79,4 +83,18 @@
     font-size: 15px;
     margin-top: 25px;
     text-shadow: 0 0 1px #000;
+}
+
+.video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video .video-ytb {
+    margin: 20px 0 0 20px;
+}
+
+.video .video-text  {
+    margin-top: 20px;
+    margin-right: 50px;
 }
