@@ -59,7 +59,7 @@
 
 #nav .subnav {
     display: none;
-    min-width: 140px; /* chieu dai toi thieu */
+    min-width: 200px; /* chieu dai toi thieu */
     position: absolute;
     top: 100%;
     left: 0;
