@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 400vh;
+}
+
 #wrapper {
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 #header {
@@ -142,15 +147,36 @@
 }
 
 .video {
+    
+}
+
+.video .video-slider {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;  
+    
 }
 
 .video .video-ytb {
-    margin: 20px 0 0 20px;
+    
 }
 
-.video .video-text  {
+#hoa10 {
+    
+    
+}
+
+#hoa10 .chuong {
+    list-style: none;
+}
+
+#hoa10 .chuong li {
     margin-top: 20px;
-    margin-right: 50px;
+}
+
+#hoa10 .chuong a{
+    margin-left: 60px;
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+
 }
