@@ -1,4 +1,4 @@
-const users = [
+/*const users = [
     { id: 1, name: "Hoang Bui", age: 19, gender: "male", money: 1000 },
     { id: 2, name: "Tran Duong", age: 14, gender: "female", money: 2000 },
     { id: 3, name: "Dinh Huan", age: 25, gender: "female", money: 1050 },
@@ -107,4 +107,64 @@ function changeGender(){
 }
 changeGender();
 console.log("Thong tin sau khi chuyen doi");
-showUsers();
+showUsers();*/
+
+
+const users = [
+    { id: 1, name: "Hoang Bui", age: 19, gender: "male", money: 1000 },
+    { id: 2, name: "Tran Duong", age: 14, gender: "female", money: 2000 },
+    { id: 3, name: "Dinh Huan", age: 25, gender: "female", money: 1050 },
+    { id: 4, name: "Minh Hoang", age: 15, gender: "male", money: 500 },
+];
+
+const getAllUsers = (users) => console.log(users);
+
+const addUser = (user) => users.push(user);
+
+const deleteUser = (userId) => {
+    return users.filter((user) => user.id !== userId);
+};
+
+const updateUser = (userId, body) => {
+    return users.map((user) =>
+        user.id === userId ? { ...user, ...body } : user
+    );
+};
+
+const statUsers = (users) => {
+    const stat = { nam: 0, teen: 0 };
+
+    users.map((user) => {
+        if (user.gender === "male") ++stat.nam;
+        if (user.age >= 15) ++stat.teen;
+    });
+
+    return stat;
+};
+
+const calcTotalMoney = (users) => {
+    return users.reduce(
+        (acc, { id, money }) => (id % 2 === 0 ? acc + money : acc),
+        0
+    );
+};
+
+getAllUsers(users);
+
+const user = {
+    id: 5,
+    name: "HUng",
+    age: 20,
+    gender: "male",
+    money: 1000,
+};
+addUser(user);
+
+console.log("after added user with id 5");
+getAllUsers(users);
+
+console.log("after updated user with id 5");
+console.log(updateUser(5, { age: 19, money: 2000 }));
+console.log(deleteUser(5));
+
+console.log(calcTotalMoney(users));
